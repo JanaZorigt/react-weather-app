@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Hearts } from "react-loader-spinner";
+import { Puff } from "react-loader-spinner";
 
 export default function Weather(props) {
   function displayWeather(response) {
@@ -14,5 +14,5 @@ export default function Weather(props) {
 
   axios.get(apiUrl).then(displayWeather);
 
-  return <Hearts heigth="100" width="100" color="red" arialLabel="loading" />;
+  return <Puff heigth="100" width="100" color="white" arialLabel="loading" />;
 }
