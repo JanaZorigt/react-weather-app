@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
@@ -77,6 +76,7 @@ export default function Weather() {
           href="https://github.com/JanaZorigt/react-weather-app"
           target="_blank"
           className="footerLink"
+          rel="noreferrer"
         >
           Open-source code
         </a>
