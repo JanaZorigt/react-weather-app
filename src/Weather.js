@@ -1,18 +1,87 @@
 import React from "react";
 import axios from "axios";
-import { Puff } from "react-loader-spinner";
+import "./Weather.css";
 
-export default function Weather(props) {
-  function displayWeather(response) {
-    //alert(`It's ${response.data.main.temp} C in ${props.cityName}`);
-  }
+export default function Weather() {
+  let weatherData = {
+    city: "Chicago",
+    date: "Saturday 22:22",
+    temperature: 33,
+    description: "Sunny",
+    humidity: 57,
+    wind: 5,
+    imageUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+  };
 
-  let apiKey = "58d4db6a0d6b79cac80768197bced22d";
-  let unit = "metric";
-  let apiUrl = `
-    https://api.openweathermap.org/data/2.5/weather?q=${props.cityName}&appid=${apiKey}&units=${unit}`;
+  return (
+    <div className="App">
+      <div className="container">
+        <form>
+          <div className="row">
+            <div className="col-8">
+              <input
+                type="search"
+                className="form-control city-input"
+                placeholder="Type to search..."
+                autoComplete="off"
+                autoFocus="on"
+              />
+            </div>
+            <div className="col-2">
+              <input
+                type="submit"
+                value="Search"
+                className="btn shadow-sn search-button"
+              />
+            </div>
+            <div className="col-2">
+              <input
+                type="submit"
+                value="Current"
+                className="btn shadow-sn current-button"
+              />
+            </div>
+          </div>
+        </form>
 
-  axios.get(apiUrl).then(displayWeather);
+        <div className="card-body">
+          <h1>{weatherData.city}</h1>
 
-  return <Puff heigth="100" width="100" color="white" arialLabel="loading" />;
+          <h2>
+            <div className="date">Last updated: {weatherData.date}</div>
+          </h2>
+
+          <div className="row">
+            <div className="col-8">
+              <img
+                src={weatherData.imageUrl}
+                alt={weatherData.description}
+                className="icon"
+              />
+              <span className="temperature">{weatherData.temperature}</span>
+              <span className="unit">°F</span>
+            </div>
+
+            <div className="col-4">
+              <ul>
+                <li>{weatherData.description}</li>
+                <li>Humidity: {weatherData.humidity}%</li>
+                <li>Wind: {weatherData.wind} mph</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <a
+          href="https://github.com/JanaZorigt/react-weather-app"
+          target="_blank"
+          className="footerLink"
+        >
+          Open-source code
+        </a>
+        {} by Jana Zorigt
+      </footer>
+    </div>
+  );
 }
