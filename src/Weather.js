@@ -78,7 +78,6 @@ export default function Weather() {
           className="footerLink"
           target="_blank"
           rel="noreferrer"
-          rel="noopener noreferrer"
         >
           Open-source code
         </a>{" "}
