@@ -7,17 +7,17 @@ export default function Weather() {
     city: "Chicago",
     date: "Saturday 22:22",
     temperature: 33,
-    description: "Sunny",
+    description: "Mostly sunny",
     humidity: 57,
     wind: 5,
     imageUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
   };
 
   return (
-    <div className="App">
-      <div className="container">
+    <div className="Weather">
+      <div className="container container-fluid">
         <form>
-          <div className="row">
+          <div className="row search-engine">
             <div className="col-8">
               <input
                 type="search"
@@ -38,13 +38,13 @@ export default function Weather() {
               <input
                 type="submit"
                 value="Current"
-                className="btn shadow-sn current-button"
+                className="btn shadow-sn current-button d-none d-sm-block"
               />
             </div>
           </div>
         </form>
 
-        <div className="card-body">
+        <div className="card-body p-0">
           <h1>{weatherData.city}</h1>
 
           <h2>
@@ -52,7 +52,7 @@ export default function Weather() {
           </h2>
 
           <div className="row">
-            <div className="col-8">
+            <div className="col-8 text-center p-0">
               <img
                 src={weatherData.imageUrl}
                 alt={weatherData.description}
@@ -62,7 +62,7 @@ export default function Weather() {
               <span className="unit">°F</span>
             </div>
 
-            <div className="col-4">
+            <div className="col-4 p-0">
               <ul>
                 <li>{weatherData.description}</li>
                 <li>Humidity: {weatherData.humidity}%</li>
@@ -75,21 +75,14 @@ export default function Weather() {
       <footer>
         <a
           href="https://github.com/JanaZorigt/react-weather-app"
-          target="_blank"
           className="footerLink"
+          target="_blank"
           rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Open-source code
         </a>{" "}
-        by{" "}
-        <a
-          href="https://github.com/JanaZorigt"
-          target="_blank"
-          className="footerLink"
-          rel="noreferrer"
-        >
-          Jana Zorigt
-        </a>
+        by Jana Zorigt
       </footer>
     </div>
   );
