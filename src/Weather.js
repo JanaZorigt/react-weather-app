@@ -81,7 +81,15 @@ export default function Weather() {
         >
           Open-source code
         </a>{" "}
-        by Jana Zorigt
+        by{" "}
+        <a
+          href="https://github.com/JanaZorigt"
+          className="footerLink"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Jana Zorigt
+        </a>
       </footer>
     </div>
   );
