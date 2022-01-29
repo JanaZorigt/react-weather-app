@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 
 export default function Weather() {
@@ -77,6 +78,7 @@ export default function Weather() {
           target="_blank"
           className="footerLink"
           rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Open-source code
         </a>{" "}
@@ -86,6 +88,7 @@ export default function Weather() {
           target="_blank"
           className="footerLink"
           rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Jana Zorigt
         </a>
