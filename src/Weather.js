@@ -103,7 +103,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "58d4db6a0d6b79cac80768197bced22d";
+    // const apiKey = "58d4db6a0d6b79cac80768197bced22d";
     let unit = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${unit}`;
 
