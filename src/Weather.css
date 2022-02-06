@@ -56,11 +56,11 @@ footer {
   border-radius: 10px;
 }
 
-.icon {
+canvas {
   margin: 0;
-  padding: 0;
+  padding-right: 15px;
   position: relative;
-  top: -25px;
+  top: 7px;
 }
 
 .temperature {
@@ -76,7 +76,7 @@ footer {
   position: relative;
   top: -32px;
   font-size: 25px;
-  margin-left: 5px;
+  margin-left: 1px;
 }
 
 .weather-forecast {

@@ -17,7 +17,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -77,7 +77,7 @@ export default function Weather(props) {
             href="https://github.com/JanaZorigt/react-weather-app"
             className="footerLink"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Open-source code
           </a>{" "}
@@ -86,7 +86,7 @@ export default function Weather(props) {
             href="https://github.com/JanaZorigt"
             className="footerLink"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Jana Zorigt
           </a>
