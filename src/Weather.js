@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import { BallTriangle } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -95,6 +96,16 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="loader d-flex justify-content-center mt-5">
+        {" "}
+        <BallTriangle
+          height="100"
+          width="100"
+          color="black"
+          ariaLabel="loading"
+        />
+      </div>
+    );
   }
 }
