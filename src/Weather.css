@@ -66,7 +66,7 @@ canvas {
 .temperature {
   margin: 0;
   padding: 0;
-  font-size: 72px;
+  font-size: 75px;
   line-height: 57px;
 }
 
@@ -74,9 +74,9 @@ canvas {
   margin: 0;
   padding: 0;
   position: relative;
-  top: -32px;
-  font-size: 25px;
-  margin-left: 1px;
+  top: -38px;
+  font-size: 20px;
+  margin-left: 5px;
 }
 
 .weather-forecast {
@@ -96,7 +96,7 @@ canvas {
   opacity: 0.8;
 }
 
-.footerLink {
+.link {
   text-decoration: none;
 }
 

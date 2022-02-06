@@ -76,7 +76,7 @@ export default function Weather(props) {
         <footer>
           <a
             href="https://github.com/JanaZorigt/react-weather-app"
-            className="footerLink"
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -85,7 +85,7 @@ export default function Weather(props) {
           by{" "}
           <a
             href="https://github.com/JanaZorigt"
-            className="footerLink"
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
           >
