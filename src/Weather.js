@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast"
 import { BallTriangle } from "react-loader-spinner";
 
 export default function Weather(props) {
@@ -41,57 +42,36 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="container container-fluid">
-          <form onSubmit={handleSubmit}>
-            <div className="row search-engine">
-              <div className="col-8">
-                <input
-                  type="search"
-                  className="form-control city-input"
-                  placeholder="Type to search..."
-                  autoComplete="off"
-                  autoFocus="on"
-                  onChange={handleCityChange}
-                />
-              </div>
-              <div className="col-2">
-                <input
-                  type="submit"
-                  value="Search"
-                  className="btn shadow-sn search-button"
-                />
-              </div>
-              <div className="col-2">
-                <input
-                  type="submit"
-                  value="Current"
-                  className="btn shadow-sn current-button d-none d-sm-block"
-                />
-              </div>
+        <form onSubmit={handleSubmit}>
+          <div className="row search-engine">
+            <div className="col-8">
+              <input
+                type="search"
+                className="form-control city-input"
+                placeholder="Type to search..."
+                autoComplete="off"
+                autoFocus="on"
+                onChange={handleCityChange}
+              />
             </div>
-          </form>
-
-          <WeatherInfo data={weatherData} />
-        </div>
-        <footer>
-          <a
-            href="https://github.com/JanaZorigt/react-weather-app"
-            className="link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open-source code
-          </a>{" "}
-          by{" "}
-          <a
-            href="https://github.com/JanaZorigt"
-            className="link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Jana Zorigt
-          </a>
-        </footer>
+            <div className="col-2">
+              <input
+                type="submit"
+                value="Search"
+                className="btn shadow-sn search-button"
+              />
+            </div>
+            <div className="col-2">
+              <input
+                type="submit"
+                value="Current"
+                className="btn shadow-sn current-button d-none d-sm-block"
+              />
+            </div>
+          </div>
+        </form>
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {

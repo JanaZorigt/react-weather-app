@@ -31,21 +31,6 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-footer {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  padding: 20px;
-  max-width: 600px;
-  margin: 25px auto 10px;
-  border-radius: 15px;
-  background-color: white;
-  border: none;
-}
-
 .city-input,
 .search-button,
 .current-button {
@@ -56,8 +41,7 @@ footer {
   border-radius: 10px;
 }
 
-canvas {
-  margin: 0;
+.WeatherInfo canvas {
   padding-right: 15px;
   position: relative;
   top: 7px;
@@ -77,23 +61,6 @@ canvas {
   top: -38px;
   font-size: 20px;
   margin-left: 5px;
-}
-
-.weather-forecast {
-  text-align: center;
-}
-
-.weather-forecast-date {
-  font-size: 15px;
-  opacity: 0.8;
-}
-
-.weather-forecast-temperature {
-  font-size: 15px;
-}
-
-.weather-forecast-temperature-min {
-  opacity: 0.8;
 }
 
 .link {
