@@ -1,3 +1,16 @@
+import React from "react";
+import "./Weather.css";
+
+export default function WeatherTemperature(props) {
+  return (
+    <div>
+      <span className="temperature">{Math.round(props.temp)}</span>
+      <span className="unit">°F</span>
+    </div>
+  );
+}
+
+/*
 import React, { useState } from "react";
 import "./Weather.css";
 
@@ -44,3 +57,4 @@ export default function WeatherTemperature(props) {
     );
   }
 }
+*/

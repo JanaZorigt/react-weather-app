@@ -78,7 +78,7 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <div className="loader d-flex justify-content-center mt-5">
+      <div className="loader d-flex justify-content-center">
         {" "}
         <BallTriangle
           height="100"
