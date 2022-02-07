@@ -17,6 +17,15 @@ export default function WeatherForecast(props) {
     setLoaded(true);
   }
 
+  function load() {
+    const apiKey = "58d4db6a0d6b79cac80768197bced22d";
+    let unit = "imperial";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (loaded) {
     return (
       <div className="WeatherForecast mt-3">
@@ -28,19 +37,15 @@ export default function WeatherForecast(props) {
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
+            } else {
+              return null;
             }
-            return null;
           })}
         </div>
       </div>
     );
   } else {
-    const apiKey = "58d4db6a0d6b79cac80768197bced22d";
-    let unit = "imperial";
-    let longitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
-    axios.get(apiUrl).then(handleResponse);
+    load();
 
     return (
       <div className="loader d-flex justify-content-center mt-3">

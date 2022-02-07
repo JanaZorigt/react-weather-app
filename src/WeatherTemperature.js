@@ -3,7 +3,7 @@ import "./Weather.css";
 
 export default function WeatherTemperature(props) {
   return (
-    <div>
+    <div className="WeatherTemperature">
       <span className="temperature">{Math.round(props.temp)}</span>
       <span className="unit">°F</span>
     </div>
