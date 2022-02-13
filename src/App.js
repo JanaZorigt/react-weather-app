@@ -16,6 +16,7 @@ export default function App() {
             className="link"
             target="_blank"
             rel="noopener noreferrer"
+            title="GitHub link"
           >
             Open-source code
           </a>{" "}
@@ -25,6 +26,7 @@ export default function App() {
             className="link"
             target="_blank"
             rel="noopener noreferrer"
+            title="Jana's GitHub Profile"
           >
             Jana Zorigt
           </a>
