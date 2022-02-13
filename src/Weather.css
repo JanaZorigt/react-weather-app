@@ -4,10 +4,6 @@
   margin-right: 10px;
 }
 
-body {
-  font-family: "Balsamiq Sans", cursive;
-}
-
 h1 {
   font-size: 45px;
   text-align: center;
@@ -15,15 +11,19 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: normal;
   text-align: center;
   margin-bottom: 5%;
+}
+
+h2 strong {
   color: blueviolet;
 }
 
 body {
   background-color: lavender;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 ul {
@@ -35,7 +35,7 @@ li {
   font-size: 15px;
   list-style: none;
   line-height: 15px;
-  padding: 5% 0;
+  padding: 3% 0;
 }
 
 li strong {
@@ -56,14 +56,10 @@ li:first-letter {
   box-shadow: 0 3px 5px rgb(65 50 100 / 10%);
 }
 
-.search-button {
-  font-weight: bold;
-}
-
 .WeatherInfo canvas {
   padding-right: 10px;
   position: relative;
-  top: 7px;
+  top: 10px;
 }
 
 .temperature {
@@ -83,4 +79,22 @@ li:first-letter {
 
 .link {
   text-decoration: none;
+}
+
+.WeatherForecast-day {
+  font-size: 15px;
+  text-align: center;
+  color: blueviolet;
+}
+
+.WeatherForecast canvas {
+  margin: 20% 0 10%;
+}
+
+.WeatherForecast-temperatures {
+  font-size: 15px;
+}
+
+.WeatherForecast-temperature-min {
+  opacity: 0.75;
 }
