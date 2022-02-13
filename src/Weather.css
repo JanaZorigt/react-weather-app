@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
 
 .Weather {
   margin-right: 10px;
 }
 
 body {
-font-family: 'Balsamiq Sans', cursive;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 h1 {
@@ -61,7 +61,7 @@ li:first-letter {
 }
 
 .WeatherInfo canvas {
-  padding-right: 15px;
+  padding-right: 10px;
   position: relative;
   top: 7px;
 }
@@ -79,7 +79,6 @@ li:first-letter {
   position: relative;
   top: -27px;
   font-size: 35px;
-  margin-left: 3px;
 }
 
 .link {
