@@ -1,14 +1,39 @@
 .container {
   padding: 35px;
   max-width: 600px;
-  margin: 25px auto 10px;
+  margin: 50px auto;
   border-radius: 15px;
   background-color: white;
   border: none;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 15%);
+}
+
+hr {
+  color: lavender;
 }
 
 footer {
   text-align: center;
-  margin: 0;
+  margin-top: 5%;
   padding: 0;
+}
+
+a:link {
+  color: blueviolet;
+}
+
+a:visited {
+  color: blueviolet;
+}
+
+a:hover {
+  color: blue;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    padding: 5%;
+    margin: 5%;
+  }
 }

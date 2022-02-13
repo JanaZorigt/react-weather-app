@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./WeatherForecast.css";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 import { BallTriangle } from "react-loader-spinner";
@@ -23,14 +22,14 @@ export default function WeatherForecast(props) {
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
-    
+
     axios.get(apiUrl).then(handleResponse);
   }
 
   if (loaded) {
     return (
       <div className="WeatherForecast mt-3">
-        <div className="row">
+        <div className="row text-center">
           {forecast.map(function (dailyForecast, index) {
             if (index < 6) {
               return (

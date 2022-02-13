@@ -1,18 +1,21 @@
-.WeatherForecast {
-  text-align: center;
-}
-
 .WeatherForecast-day {
   font-size: 15px;
+  text-align: center;
+   color: blueviolet;
 }
 
 .WeatherForecast-temperatures {
   font-size: 15px;
 }
+
+.WeatherForecast-temperature-max {
+  color: blueviolet;
+}
+
 .WeatherForecast-temperature-min {
   opacity: 0.75;
-  margin-left: 5px;
 }
+
 .WeatherForecast canvas {
-  padding-top: 5px;
+  margin-top: 10px;
 }

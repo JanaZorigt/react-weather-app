@@ -1,14 +1,18 @@
+.Weather {
+  margin-right: 10px;
+}
+
 h1 {
   font-size: 40px;
   text-align: center;
-  padding: 20px 20px 10px;
 }
 
 h2 {
   font-size: 25px;
   font-weight: normal;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 5%;
+  color: blueviolet;
 }
 
 body {
@@ -23,8 +27,12 @@ ul {
 li {
   font-size: 15px;
   list-style: none;
-  line-height: 8px;
-  margin-bottom: 20px;
+  line-height: 15px;
+  padding: 5% 0;
+}
+
+li strong {
+  color: blueviolet;
 }
 
 li:first-letter {
@@ -32,13 +40,17 @@ li:first-letter {
 }
 
 .city-input,
-.search-button,
-.current-button {
+.search-button {
   background-color: lavender;
   color: black;
   border: none;
   padding: 8px 12px;
   border-radius: 10px;
+  box-shadow: 0 3px 5px rgb(65 50 100 / 10%);
+}
+
+.search-button {
+  font-weight: bold;
 }
 
 .WeatherInfo canvas {
@@ -58,41 +70,11 @@ li:first-letter {
   margin: 0;
   padding: 0;
   position: relative;
-  top: -35px;
-  font-size: 25px;
-  margin-left: 5px;
+  top: -27px;
+  font-size: 35px;
+  margin-left: 3px;
 }
 
 .link {
   text-decoration: none;
-}
-
-@media (max-width: 600px) {
-  .container {
-    max-width: 90%;
-    padding: 20px;
-    margin: 20px;
-  }
-
-  /*
-  .search-engine {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  */
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    line-height: 18px;
-    margin: 10px;
-    padding: 0;
-  }
-
-  h2 {
-    margin-bottom: 20px;
-  }
 }
